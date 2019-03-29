@@ -87,10 +87,7 @@ while(TRUE) {
                 socket_getpeername($readfd, $client_addr, $client_port);
                 echo "readable socket: {$client_addr}:{$client_port}".PHP_EOL;
 
-                $data = '';
-                while($buf = socket_read($readfd, 8192)) {
-                    $data .= $buf;
-                }
+                $data = socket_read($readfd, 8192)) {
                 
                 if(!empty($data)) {
                     echo 'read: '.$data.PHP_EOL;

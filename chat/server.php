@@ -37,7 +37,7 @@ while(TRUE) {
                 $client_name = "{$client_addr}:{$client_port}";
                 echo "readable socket: {$client_name}".PHP_EOL;
 
-                $data = @socket_read($readfd, 8192, PHP_NORMAL_READ);
+                $data = @socket_read($readfd, 8192);
 
                 // 客户端断开连接
                 if(!$data) {
